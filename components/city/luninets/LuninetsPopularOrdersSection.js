@@ -1,0 +1,162 @@
+// /components/city/luninets/LuninetsPopularOrdersSection.jsx — ПОЛНОСТЬЮ
+import Image from "next/image";
+
+const HERO_DESKTOP = "/fon/populyarnaya-mebel-na-zakaz-luninets.webp";
+const HERO_MOBILE = "/fon/populyarnaya-mebel-na-zakaz-luninets-mobile.webp";
+
+const POPULAR = [
+  {
+    title: "Кухни на заказ",
+    text: "Компоновка под вашу технику: удобные зоны, влагостойкие материалы, выдвижные системы и подсветка.",
+    tags: ["мебель на заказ", "изготовление мебели под заказ"],
+    icon: "/svg/kitchen.svg",
+    grad: "from-amber-400/20 via-yellow-300/10 to-transparent",
+  },
+  {
+    title: "Шкафы-купе и гардеробные",
+    text: "Хранение без хаоса: секции, штанги, корзины, ящики, зеркала и надёжная фурнитура.",
+    tags: ["встроенная мебель на заказ", "мебель по индивидуальному заказу"],
+    icon: "/svg/wardrobe.svg",
+    grad: "from-cyan-400/20 via-sky-300/10 to-transparent",
+  },
+  {
+    title: "Прихожие и мебель в нишу",
+    text: "Компактно и практично: обувница, зеркало, крючки, антресоль — под ваш коридор и стиль.",
+    tags: ["корпусная мебель на заказ", "мебель под заказ"],
+    icon: "/svg/wardrobe2.svg",
+    grad: "from-indigo-400/20 via-violet-300/10 to-transparent",
+  },
+  {
+    title: "Офисная мебель",
+    text: "Столы, тумбы, шкафы, стойки. Учитываем нагрузку, кабели и удобство повседневной работы.",
+    tags: ["офисная мебель на заказ", "офисная мебель под заказ"],
+    icon: "/svg/office.svg",
+    grad: "from-emerald-400/20 via-green-300/10 to-transparent",
+  },
+  {
+    title: "Мягкая мебель",
+    text: "Диваны, кровати, мягкие панели. Подбор ткани и наполнения под износостойкость и комфорт.",
+    tags: ["мягкая мебель на заказ", "заказать мебель"],
+    icon: "/svg/sofa.svg",
+    grad: "from-rose-400/20 via-pink-300/10 to-transparent",
+  },
+  {
+    title: "Гостиные и ТВ-зоны",
+    text: "Модули по размерам стены: хранение, ТВ-ниша, аккуратные зазоры, безопасные кромки.",
+    tags: ["изготовление мебели на заказ", "мебель заказать"],
+    icon: "/svg/tv.svg",
+    grad: "from-sky-400/20 via-cyan-300/10 to-transparent",
+  },
+];
+
+export default function LuninetsPopularOrdersSection() {
+  return (
+    <section className="bg-white py-10 sd:py-14" id="popular-luninets">
+      <div className="container mx-auto">
+        <div className="relative rounded-[28px] border border-slate-200 bg-white shadow-sm overflow-hidden">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -top-28 -right-24 h-80 w-80 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(253,183,35,0.26),transparent_60%)] blur-2xl" />
+            <div className="absolute -bottom-32 -left-28 h-96 w-96 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(22,182,198,0.18),transparent_60%)] blur-2xl" />
+            <div className="absolute inset-0 opacity-[0.35] bg-[linear-gradient(135deg,rgba(253,183,35,0.06)_0%,rgba(22,182,198,0.06)_35%,rgba(99,102,241,0.05)_70%,rgba(255,255,255,0)_100%)]" />
+          </div>
+
+          {/* top image */}
+          <div className="relative">
+            <div className="relative hidden sd:block h-65">
+              <Image
+                src={HERO_DESKTOP}
+                alt="Популярная мебель на заказ в Лунинце — кухни, шкафы, прихожие, офис и мягкая мебель"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1200px"
+                className="object-cover object-center"
+                quality={72}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/35" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/45 via-black/20 to-transparent" />
+              <div className="absolute inset-0 opacity-60 bg-[radial-gradient(900px_circle_at_30%_30%,transparent_35%,rgba(0,0,0,.55)_100%)]" />
+            </div>
+
+            <div className="relative sd:hidden h-55">
+              <Image
+                src={HERO_MOBILE}
+                alt="Популярная мебель на заказ в Лунинце — кухни, шкафы, прихожие, офис и мягкая мебель"
+                fill
+                sizes="100vw"
+                className="object-cover object-center"
+                quality={70}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/25 to-transparent" />
+            </div>
+
+            <div className="absolute inset-0 flex items-end">
+              <div className="w-full p-6 sd:p-8">
+                <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sd:text-sm text-white/90 backdrop-blur border border-white/10">
+                  <span className="h-2 w-2 rounded-full bg-[#fdb723]" />
+                  Лунинец • что чаще всего заказывают
+                </p>
+
+                <h2 className="mt-3 text-2xl sd:text-3xl font-extrabold text-white leading-tight">
+                  Популярные заказы мебели в Лунинце
+                </h2>
+
+                <p className="mt-2 text-sm sd:text-base text-white/85 max-w-3xl">
+                  Эти категории чаще всего заказывают, когда ищут <strong>мебель на заказ</strong> и{" "}
+                  <strong>мебель под заказ</strong> в Лунинце. Подберём решение под ваш размер и бюджет.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative p-6 sd:p-8">
+            <div className="grid grid-cols-1 sd:grid-cols-2 lg:grid-cols-3 gap-4">
+              {POPULAR.map((c) => (
+                <article
+                  key={c.title}
+                  className="group relative rounded-2xl border border-slate-200 bg-white/85 p-5 overflow-hidden shadow-[0_10px_30px_rgba(2,6,23,0.06)] hover:shadow-[0_16px_44px_rgba(2,6,23,0.10)] transition-shadow"
+                >
+                  <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${c.grad}`} />
+                  <div className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(520px_circle_at_15%_0%,rgba(255,255,255,0.7),transparent_55%)]" />
+
+                  <div className="relative flex items-start gap-3">
+                    <div className="shrink-0">
+                      <div className="h-11 w-11 rounded-2xl border border-slate-200 bg-white flex items-center justify-center shadow-sm">
+                        <Image src={c.icon} alt="Мебель под заказ" width={22} height={22} />
+                      </div>
+                    </div>
+
+                    <div className="min-w-0">
+                      <h3 className="text-base font-extrabold text-slate-900 leading-snug">{c.title}</h3>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{c.text}</p>
+                    </div>
+                  </div>
+
+                  <div className="relative mt-4 flex flex-wrap gap-2">
+                    {c.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-[11px] text-slate-700"
+                      >
+                        <span className="h-1.5 w-1.5 rounded-full bg-[linear-gradient(135deg,#fdb723,#16b6c6)]" />
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="pointer-events-none absolute left-5 right-5 bottom-4 h-px bg-[linear-gradient(90deg,rgba(253,183,35,0.60),rgba(22,182,198,0.45),rgba(99,102,241,0.35),transparent)]" />
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-6 text-center text-sm sd:text-base text-slate-700">
+              <span className="font-script text-secondary font-bold xz:text-xl sd:text-2xl">Подсказка:</span> для расчёта укажите размеры,
+              материалы/цвет и что хотите хранить внутри — так точнее попадём в бюджет.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

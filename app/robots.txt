@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sfera24.by/sitemap.xml

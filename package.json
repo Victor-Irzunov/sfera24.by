@@ -1,0 +1,23 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@next/third-parties": "^16.1.6",
+    "axios": "^1.13.2",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-fast-marquee": "^1.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "daisyui": "^5.5.14",
+    "tailwindcss": "^4"
+  }
+}
